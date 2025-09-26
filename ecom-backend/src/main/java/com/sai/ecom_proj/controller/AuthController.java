@@ -10,9 +10,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.sai.ecom_proj.dto.*;
-import com.sai.ecom_proj.model.Users;
-import com.sai.ecom_proj.repo.UserRepo;
-import com.sai.ecom_proj.security.JwtUtil;
 
 @RestController
 @RequestMapping("/api/auth")
