@@ -19,7 +19,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         const response = await axiosInstance.get(
-          `http://localhost:8080/api/product/${id}`
+          `/api/product/${id}`
         );
         setProduct(response.data);
         if (response.data.imageName) {
@@ -32,7 +32,7 @@ const Product = () => {
 
     const fetchImage = async () => {
       const response = await axiosInstance.get(
-        `http://localhost:8080/api/product/${id}/image`,
+        `/api/product/${id}/image`,
         { responseType: "blob" }
       );
       setImageUrl(URL.createObjectURL(response.data));
@@ -43,7 +43,7 @@ const Product = () => {
 
   const deleteProduct = async () => {
     try {
-      await axiosInstance.delete(`http://localhost:8080/api/product/${id}`);
+      await axiosInstance.delete(`/api/product/${id}`);
       removeFromCart(id);
       console.log("Product deleted successfully");
       alert("Product deleted successfully");

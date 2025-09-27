@@ -1,13 +1,12 @@
 package com.sai.ecom_proj.security;
 
-import java.security.Key;
-import java.util.Date;
-
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.Keys;
+import java.security.Key;
+import java.util.Date;
 
 @Component
 public class JwtUtil {

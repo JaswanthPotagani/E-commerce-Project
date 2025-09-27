@@ -1,13 +1,12 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:8080", // backend base url
+  baseURL: "/", // Use root path, we'll specify full paths in requests
 });
 
-// ✅ Use axiosInstance here (not api)
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("jwtToken"); // store token after login
+    const token = localStorage.getItem("jwtToken");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

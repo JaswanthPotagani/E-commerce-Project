@@ -1,5 +1,6 @@
 package com.sai.ecom_proj.model;
 
+import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,13 +23,13 @@ public class Users {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-
+	
 	@Column(unique=true,nullable=false)
 	private String username;
-
+	
 	@Column(nullable = false)
 	private String password;
-
+	
 	@Column(nullable = false)
 	private String role = "USER";
 
@@ -64,6 +65,6 @@ public class Users {
 		this.role = role;
 	}
 
-
-
+	
+	
 }
